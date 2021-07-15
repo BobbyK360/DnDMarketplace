@@ -65,6 +65,13 @@ nav {
   /* display: inline-block; */
   display: inline-flex;
   /* background-color: yellow; */
+  /* -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; */
+  /* pointer-events: none; */
 }
 
 .header__logo a img {
@@ -77,6 +84,7 @@ nav {
   margin-left: 5px;
   font-size: 2.5rem;
   font-weight: 400;
+  user-select: none;
 }
 
 .currency {

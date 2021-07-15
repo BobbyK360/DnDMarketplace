@@ -12,11 +12,6 @@ const campaignArray = [
   },
 ];
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   campaignBuilder();
-//   selectOutline();
-// });
-
 window.addEventListener("load", () => {
   campaignBuilder();
   selectOutline();
@@ -31,10 +26,12 @@ function campaignBuilder() {
     //creating an IMG to go into the Div
     let campaignIMG = document.createElement("img");
     campaignIMG.src = element.campaignIMG;
+    // campaignIMG.draggable = false;
 
     //creating a div that goes into campaign div
     let campaignName = document.createElement("div");
     campaignName.innerHTML = element.campaignName;
+    // campaignName.preventD
 
     //append IMG and div to campaign div
     campaignDivContainer.appendChild(campaignIMG);

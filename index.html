@@ -20,10 +20,9 @@
     <header>
       <div class="header__container">
         <div class="header__logo">
-          <a href="#">
-            <img src="img/dnd white.png" alt="DnD Logo" /><span
-              >Marketplace</span
-            >
+          <a href="index.html">
+            <img src="img/dnd white.png" alt="DnD Logo" />
+            <span>Marketplace</span>
           </a>
         </div>
         <div class="currency">
@@ -50,11 +49,40 @@
     <section class="campaign-selection">
       <div class="campaign-selection__wrapper">
         <h1>Campaigns</h1>
-        <div class="campaign-selection__list">
-        </div>
+        <div class="campaign-selection__list"></div>
       </div>
     </section>
 
+    <section class="marketplace">
+      <div class="marketplace__header-wrapper">
+        <h1>Marketplace</h1>
+        <span class="marketplace__tab-wrapper">
+          <span class="marketplace__tab">Shop Items</span>
+          <span class="marketplace__tab">All Items</span>
+        </span>
 
+        <div class="marketplace__searchbar-wrapper">
+          <div class="marketplace__searchbar-top">
+            <span class="marketplace__item-category-wrapper">
+              <input type="radio" name="item-category" id="shopGeneric" />
+              <label for="shopGeneric">Generic Items</label>
+
+              <input type="radio" name="item-category" id="shopMag" />
+              <label for="shopMag">Magical Items</label>
+
+              <input type="radio" name="item-category" id="shopNonMag" />
+              <label for="shopNonMag">Non-magical Items</label>
+            </span>
+
+            <button>Search</button>
+          </div>
+
+          <div class="marketplace__searchbar-bot">
+            <input type="search" name="" id="" placeholder="img/">
+          </div>
+
+        </div>
+      </div>
+    </section>
   </body>
 </html>
