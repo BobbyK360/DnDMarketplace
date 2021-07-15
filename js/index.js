@@ -18,28 +18,21 @@ window.addEventListener("load", () => {
 });
 
 function campaignBuilder() {
-  for (let element of campaignArray) {
-    //creating campaign div
-    let campaignDivContainer = document.createElement("div");
-    campaignDivContainer.classList.add("campaign");
+  let campaignDivString = "";
 
-    //creating an IMG to go into the Div
-    let campaignIMG = document.createElement("img");
-    campaignIMG.src = element.campaignIMG;
-    // campaignIMG.draggable = false;
-
-    //creating a div that goes into campaign div
-    let campaignName = document.createElement("div");
-    campaignName.innerHTML = element.campaignName;
-    // campaignName.preventD
-
-    //append IMG and div to campaign div
-    campaignDivContainer.appendChild(campaignIMG);
-    campaignDivContainer.appendChild(campaignName);
-
-    //append to parent div
-    campaignSelection.appendChild(campaignDivContainer);
+  for (let item of campaignArray) {
+    function htmlCreator() {
+      return `
+        <div class="campaign">
+          <img src="${item.campaignIMG}">
+          <div>${item.campaignName}</div>
+        </div>
+      `;
+    }
+    campaignDivString += htmlCreator();
   }
+
+  campaignSelection.innerHTML = campaignDivString;
 }
 
 function selectOutline() {
