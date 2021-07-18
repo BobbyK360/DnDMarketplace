@@ -74,46 +74,92 @@
   margin-top: 0;
 }
 
-
 /* SEARCH BAR */
 .marketplace {
-    position: relative;
-    background-color: lightcoral;
+  position: relative;
+  background-color: lightcoral;
 }
 
 .marketplace__header-wrapper {
-    position: relative;
-    height: 100%;
-    width: 80%;
-    background-color: lavender;
-    margin: auto;
+  position: relative;
+  height: 100%;
+  width: 80%;
+  background-color: lavender;
+  margin: auto;
 }
 
 .marketplace__header-wrapper > h1 {
-    font-size: 2rem;
-    color: white;
+  font-size: 2rem;
+  color: white;
 }
 
 .marketplace__tab-wrapper {
-    display: inline-block;
-    background-color: yellow;
-    margin-top: 20px;
+  display: inline-block;
+  background-color: yellow;
+  margin-top: 20px;
 }
 
 .marketplace__tab-wrapper span {
-    display: inline-flex;
-    background-color: lightblue;
-    margin: 0 10px;
-    width: 200px;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
+  display: inline-flex;
+  background-color: lightblue;
+  margin: 0 10px;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .marketplace__searchbar-wrapper {
-    height: 200px;
-    background-color: lightslategray;
+  height: 200px;
+  background-color: lightslategray;
+  display: flex;
+  flex-direction: column;
+}
+
+.marketplace__searchbar-top,
+.marketplace__searchbar-bot {
+  flex: 1;
+  width: 100%;
+  background-color: green;
+  padding: 0 10px;
+}
+
+.marketplace__searchbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .marketplace__searchbar-top span,
+.marketplace__searchbar-top button {
+  display: block;
+} */
+
+/* .marketplace__searchbar-top button {
+  display: inline-block;
+  margin-left: auto;
+} */
+
+.marketplace__item-category-wrapper {
+  /* background-color: yellow; */
+  width: 100%;
+}
+
+.radio-container {
+  margin: 10px;
+}
+
+.marketplace__searchbar-bot input#searchbar {
+  background-image: url("../img/search-icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  text-indent: 5px;
+}
+
+.marketplace__searchbar-bot input#searchbar:focus {
+  background-image: none;
 }
