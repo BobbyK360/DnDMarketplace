@@ -1,4 +1,3 @@
-const campaignSelection = document.querySelector(".campaign-selection__list");
 const campaignArray = [
   { campaignName: "Valeria", campaignIMG: "./img/game1.jpg" },
   {
@@ -15,9 +14,11 @@ const campaignArray = [
 window.addEventListener("load", () => {
   campaignBuilder();
   selectOutline();
+  loadWeaponType();
 });
 
 function campaignBuilder() {
+  const campaignSelection = document.querySelector(".campaign-selection__list");
   let campaignDivString = "";
 
   for (let item of campaignArray) {
@@ -47,4 +48,71 @@ function selectOutline() {
       }
     });
   }
+}
+
+const weaponTypeArray = [
+  "Battleaxe",
+  "Blowgun",
+  "Boomerang",
+  "Club",
+  "Crossbow - Hand",
+  "Crossbow - Light",
+  "Crossbow - Heavy",
+  "Dagger",
+  "Dart",
+  "Double-Bladed Scimitar",
+  "Flail",
+  "Glaive",
+  "Greataxe",
+  "Greatclub",
+  "Greatsword",
+  "Halberd",
+  "Handaxe",
+  "Javelin",
+  "Lance",
+  "Laser Pistol",
+  "Laser Rifle",
+  "Light Hammer",
+  "Longbow",
+  "Longsword",
+  "Mace",
+  "Maul",
+  "Morningstar",
+  "Musket",
+  "Net",
+  "Pike",
+  "Pistol",
+  "Quarterstaff",
+  "Rapier",
+  "Revolver",
+  "Rifle - Automatic",
+  "Rifle - Hunting",
+  "Scimitar",
+  "Shortbow",
+  "Shortsword",
+  "Shotgun",
+  "Sickle",
+  "Sling",
+  "Spear",
+  "Trident",
+  "War Pick",
+  "Warhammer",
+  "Whip",
+  "Yklwa",
+];
+
+function loadWeaponType() {
+  const weaponTypeEl = document.getElementById("weapon-type");
+  let weaponTypeString = "";
+
+  for (let weapon of weaponTypeArray) {
+    function htmlCreator() {
+      return `
+        <option value="${weapon}">${weapon}</option>
+      `;
+    }
+    weaponTypeString += htmlCreator();
+  }
+  console.log(weaponTypeString);
+  weaponTypeEl.innerHTML = weaponTypeString;
 }
