@@ -8,10 +8,12 @@
 .campaign-selection__wrapper {
   /* background-color: white; */
   height: 100%;
-  display: inline-block;
+  /* display: inline-block; */
   /* margin-top: 40px;
     margin-left: 80px; */
-  margin: 40px 80px;
+  /* margin: 40px 80px; */
+  width: 80%;
+  margin: 0 auto;
 }
 
 .campaign-selection__wrapper h1 {
@@ -77,14 +79,14 @@
 /* SEARCH BAR */
 .marketplace {
   position: relative;
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
 }
 
 .marketplace__header-wrapper {
   position: relative;
   height: 100%;
   width: 80%;
-  background-color: lavender;
+  /* background-color: lavender; */
   margin: auto;
 }
 
@@ -95,13 +97,13 @@
 
 .marketplace__tab-wrapper {
   display: inline-block;
-  background-color: yellow;
+  /* background-color: yellow; */
   margin-top: 20px;
 }
 
 .marketplace__tab-wrapper span {
   display: inline-flex;
-  background-color: lightblue;
+  /* background-color: lightblue; */
   margin: 0 10px;
   width: 200px;
   height: 50px;
@@ -110,11 +112,17 @@
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
+  background-color: salmon;
 }
 
 .marketplace__searchbar-wrapper {
   height: 200px;
-  background-color: lightslategray;
+  /* background-color: salmon; */
+  /* background-color: #130f40; */
+  /* background-image: linear-gradient(315deg, #130f4086 0%, #00000077 74%); */
+  /* background-color: #12100e; */
+  background-image: linear-gradient(170deg, #2b4162 0%, #12100e 50%);
+  color: white;
   display: flex;
   flex-direction: column;
 }
@@ -123,7 +131,7 @@
 .marketplace__searchbar-bot {
   flex: 1;
   width: 100%;
-  background-color: green;
+  /* background-color: green; */
   padding: 0 10px;
 }
 
@@ -144,13 +152,72 @@
 } */
 
 .marketplace__item-category-wrapper {
+  position: relative;
   /* background-color: yellow; */
-  width: 100%;
+  width: 60%;
+  min-width: 415px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .radio-container {
   margin: 10px;
+  flex: 1;
+  /* display: inline-block; */
+  /* min-width: 150px; */
 }
+
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container label {
+  display: inline-block;
+  /* background-color: green; */
+  height: 50px;
+  width: 100%;
+  /* opacity: 0; */
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  /* width: 100%; */
+}
+
+.radio-container input:checked + label {
+  /* background-color: grey; */
+  /* height: 50px; */
+  background-color: #9c2d2d;
+  /* background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%); */
+  /* opacitY: 100%; */
+}
+
+.radio-container input:checked + label span::after {
+  width: 60%;
+}
+
+.radio-container label span {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.radio-container label span::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  transform: translateY(15px);
+  transition: all .2s ease-in-out;
+}
+
+.radio-container label:hover span::after {
+  width: 60%;
+}
+
 
 .marketplace__searchbar-bot input#searchbar {
   background-image: url("../img/search-icon.png");

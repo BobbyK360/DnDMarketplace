@@ -10,46 +10,6 @@ const campaignArray = [
     campaignIMG: "./img/game4.jpg",
   },
 ];
-
-window.addEventListener("load", () => {
-  campaignBuilder();
-  selectOutline();
-  loadWeaponType();
-});
-
-function campaignBuilder() {
-  const campaignSelection = document.querySelector(".campaign-selection__list");
-  let campaignDivString = "";
-
-  for (let item of campaignArray) {
-    function htmlCreator() {
-      return `
-        <div class="campaign">
-          <img src="${item.campaignIMG}">
-          <div>${item.campaignName}</div>
-        </div>
-      `;
-    }
-    campaignDivString += htmlCreator();
-  }
-
-  campaignSelection.innerHTML = campaignDivString;
-}
-
-function selectOutline() {
-  let campaignList = document.querySelectorAll(".campaign");
-  for (let campaign of campaignList) {
-    campaign.addEventListener("click", () => {
-      if (!campaign.classList.contains("campaign-1")) {
-        for (let campaign2 of campaignList) {
-          campaign2.classList.remove("campaign-1");
-        }
-        campaign.classList.add("campaign-1");
-      }
-    });
-  }
-}
-
 const weaponTypeArray = [
   "Battleaxe",
   "Blowgun",
@@ -101,10 +61,46 @@ const weaponTypeArray = [
   "Yklwa",
 ];
 
+window.addEventListener("load", () => {
+  campaignBuilder();
+  selectOutline();
+  loadWeaponType();
+});
+
+function campaignBuilder() {
+  const campaignSelection = document.querySelector(".campaign-selection__list");
+  let campaignDivString = "";
+  for (let item of campaignArray) {
+    function htmlCreator() {
+      return `
+        <div class="campaign">
+          <img src="${item.campaignIMG}">
+          <div>${item.campaignName}</div>
+        </div>
+      `;
+    }
+    campaignDivString += htmlCreator();
+  }
+  campaignSelection.innerHTML = campaignDivString;
+}
+
+function selectOutline() {
+  let campaignList = document.querySelectorAll(".campaign");
+  for (let campaign of campaignList) {
+    campaign.addEventListener("click", () => {
+      if (!campaign.classList.contains("campaign-1")) {
+        for (let campaign2 of campaignList) {
+          campaign2.classList.remove("campaign-1");
+        }
+        campaign.classList.add("campaign-1");
+      }
+    });
+  }
+}
+
 function loadWeaponType() {
   const weaponTypeEl = document.getElementById("weapon-type");
   let weaponTypeString = "";
-
   for (let weapon of weaponTypeArray) {
     function htmlCreator() {
       return `
@@ -113,6 +109,5 @@ function loadWeaponType() {
     }
     weaponTypeString += htmlCreator();
   }
-  console.log(weaponTypeString);
   weaponTypeEl.innerHTML = weaponTypeString;
 }
