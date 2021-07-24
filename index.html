@@ -71,58 +71,43 @@
           <div class="marketplace__searchbar-top">
             <span class="marketplace__item-category-wrapper">
               <span class="radio-container">
-                <input type="radio" name="item-category" id="shopGeneric" />
-                <label for="shopGeneric"><span>Generic Items</span></label>
+                <input type="radio" name="item-category" id="shopEquipment" />
+                <label for="shopEquipment"><span>Equipment</span></label>
               </span>
 
               <span class="radio-container">
                 <input type="radio" name="item-category" id="shopNonMag" />
-                <label for="shopNonMag"><span>Non-magical Items</span></label>
+                <label for="shopNonMag"><span>Magic Items</span></label>
               </span>
 
               <span class="radio-container">
                 <input type="radio" name="item-category" id="shopMag" />
-                <label for="shopMag"><span>Magical Items</span></label>
+                <label for="shopMag"><span>Wondrous Items</span></label>
               </span>
             </span>
 
             <button>Search</button>
           </div>
-
           <div class="marketplace__searchbar-bot">
             <div class="marketplace__searchbar-bot-upper">
               <div class="searchbar-wrapper">
                 <input
                   type="search"
-                  name=""
                   id="searchbar"
                   placeholder="Search"
                 />
                 <label for="searchbar"></label>
               </div>
 
-              <div class="weparmitem-wrapper">
-                <label for="weparmitem">Wep/Arm/Item</label>
-                <select name="weparmitem" id="weparmitem">
-                  <option value="unspecified">Wep/Arm/Item</option>
-                  <option value="weapon">Weapon</option>
-                  <option value="armour">Armour</option>
-                  <option value="item">Item</option>
+              <div class="typeof-item-wrapper">
+                <label for="typeof-item">Wep/Arm/Item</label>
+                <select name="typeof-item" id="typeof-item">
                 </select>
               </div>
 
               <div class="item-rarity-wrapper">
                 <label for="item-rarity">Rarity</label>
                 <select name="item-rarity" id="item-rarity">
-                  <option value="unspecified">Rarity</option>
-                  <option value="common">Common</option>
-                  <option value="uncommon">Uncommon</option>
-                  <option value="rare">Rare</option>
-                  <option value="vrare">Very Rare</option>
-                  <option value="legendary">Legendary</option>
-                  <option value="artifact">Artifact</option>
-                  <option value="varies">Varies</option>
-                  <option value="unknown">Unknown</option>
                 </select>
               </div>
             </div>
@@ -131,9 +116,6 @@
               <div class="combat-style-wrapper">
                 <label for="combat-style">Combat Style</label>
                 <select name="combat-style" id="combat-style">
-                  <option value="unspecified">Combat Style</option>
-                  <option value="melee">Melee</option>
-                  <option value="ranged">Ranged</option>
                   <!-- <option value="item">Magic</option> -->
                 </select>
               </div>
