@@ -26,12 +26,20 @@
   position: relative;
   display: inline-block;
   margin-right: 10px;
-  border: 0px solid transparent;
-  transition: all 0.2s ease-in-out;
+  /* border: 0px solid transparent; */
   cursor: pointer;
 }
 
-.campaign img {
+.campaign label {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  border: 5px solid transparent;
+  transition: all .2s ease-in-out;
+}
+
+
+.campaign label img {
   height: 100%;
   -webkit-user-drag: none;
   user-select: none;
@@ -42,7 +50,7 @@
   pointer-events: none;
 }
 
-.campaign > div {
+.campaign label > div {
   position: absolute;
   bottom: 0;
   color: white;
@@ -55,7 +63,11 @@
   text-align: center;
 }
 
-.campaign-1 {
+.campaign input[type=radio] {
+  display: none;
+}
+
+.campaign input:checked + label {
   border: 5px solid green;
   margin-top: 0;
 }
@@ -64,6 +76,7 @@
 .marketplace {
   position: relative;
   padding-top: 50px;
+  /* display: none; */
 }
 
 .marketplace__header-wrapper {

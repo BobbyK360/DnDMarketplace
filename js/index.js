@@ -3,6 +3,7 @@ const campaignArray = [
   {
     campaignName: "Paradise Lost",
     campaignIMG: "./img/game2.jpg",
+    // campaignID: "paradise-lost"
   },
   { campaignName: "DragonFall", campaignIMG: "./img/game3.jpg" },
   {
@@ -75,29 +76,17 @@ function campaignBuilder() {
     function htmlCreator() {
       return `
         <div class="campaign">
+          <input type="radio" name="campaign-list" id="campaign__${item.campaignName.replace(/\s+/g, '')}" />
+          <label for="campaign__${item.campaignName.replace(/\s+/g, '')}">
           <img src="${item.campaignIMG}">
           <div>${item.campaignName}</div>
+        </label>
         </div>
       `;
     }
     campaignDivString += htmlCreator();
   }
   campaignSelection.innerHTML = campaignDivString;
-
-}
-
-function selectOutline() {
-  let campaignList = document.querySelectorAll(".campaign");
-  for (let campaign of campaignList) {
-    campaign.addEventListener("click", () => {
-      if (!campaign.classList.contains("campaign-1")) {
-        for (let campaign2 of campaignList) {
-          campaign2.classList.remove("campaign-1");
-        }
-        campaign.classList.add("campaign-1");
-      }
-    });
-  }
 }
 
 function loadWeaponType() {
@@ -113,8 +102,8 @@ function loadWeaponType() {
   }
   weaponTypeEl.innerHTML = weaponTypeString;
 
-  const weaponTypeFirstDropdown = document.querySelector('#weapon-type > option:first-child');
-  weaponTypeFirstDropdown.value = "unspecified"
-  // console.log(weaponTypeFirstDropdown);
-  // weaponTypeFirstDropdown.style.background = "#000";
+  const weaponTypeFirstDropdown = document.querySelector(
+    "#weapon-type > option:first-child"
+  );
+  weaponTypeFirstDropdown.value = "unspecified";
 }
