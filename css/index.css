@@ -1,30 +1,22 @@
 .campaign-selection {
   position: relative;
   margin-top: 100px;
-  /* background-color: blueviolet; */
-  /* height: 100px; */
+  padding-top: 50px;
 }
 
 .campaign-selection__wrapper {
-  /* background-color: white; */
   height: 100%;
-  /* display: inline-block; */
-  /* margin-top: 40px;
-    margin-left: 80px; */
-  /* margin: 40px 80px; */
   width: 80%;
   margin: 0 auto;
 }
 
 .campaign-selection__wrapper h1 {
-  /* position: relative; */
   font-size: 2rem;
   color: #fff;
 }
 
 .campaign-selection__list {
   height: 200px;
-  /* background-color: cornflowerblue; */
   margin-top: 20px;
   display: flex;
 }
@@ -40,15 +32,7 @@
 }
 
 .campaign img {
-  /* position: absolute; */
   height: 100%;
-  /* user-select: none; */
-  /* -webkit-user-drag: none; */
-  /* -khtml-user-select: none;
-    -o-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none; */
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
@@ -79,14 +63,13 @@
 /* SEARCH BAR */
 .marketplace {
   position: relative;
-  /* background-color: lightcoral; */
+  padding-top: 50px;
 }
 
 .marketplace__header-wrapper {
   position: relative;
   height: 100%;
   width: 80%;
-  /* background-color: lavender; */
   margin: auto;
 }
 
@@ -97,13 +80,11 @@
 
 .marketplace__tab-wrapper {
   display: inline-block;
-  /* background-color: yellow; */
   margin-top: 20px;
 }
 
 .marketplace__tab-wrapper span {
   display: inline-flex;
-  /* background-color: lightblue; */
   margin: 0 10px;
   width: 200px;
   height: 50px;
@@ -112,24 +93,14 @@
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
-  /* background-color: salmon; */
   background-color: #ed6a5a;
   border-radius: 5px 5px 0px 0px;
   font-weight: 700;
 }
 
 .marketplace__searchbar-wrapper {
-  height: 200px;
-  /* background-color: salmon; */
-  /* background-color: #130f40; */
-  /* background-image: linear-gradient(315deg, #130f4086 0%, #00000077 74%); */
-  /* background-color: #12100e; */
-  /* background-image: linear-gradient(170deg, #2b4162 0%, #12100e 50%); */
-  /* background-color: #facc6b; */
+  height: 300px;
   background-image: linear-gradient(315deg, #facc6b 0%, #fabc3c 74%);
-  /* background-color: #f39f86; */
-  /* background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%); */
-  /* color: white; */
   color: #795710;
   display: flex;
   justify-content: center;
@@ -137,14 +108,12 @@
   flex-direction: column;
   border-radius: 10px;
   font-weight: 700;
-  /* width: 100%; */
 }
 
 .marketplace__searchbar-top,
 .marketplace__searchbar-bot {
   flex: 1;
   width: 80%;
-  /* background-color: green; */
   padding: 0 10px;
 }
 
@@ -156,7 +125,6 @@
 
 .marketplace__item-category-wrapper {
   position: relative;
-  /* background-color: yellow; */
   width: 60%;
   min-width: 640px;
   display: flex;
@@ -166,10 +134,8 @@
 }
 
 .radio-container {
-  margin: 5px;
+  margin: 5px 5px 5px 0px;
   flex: 1;
-  /* display: inline-block; */
-  /* min-width: 150px; */
 }
 
 .radio-container input[type="radio"] {
@@ -178,22 +144,15 @@
 
 .radio-container label {
   display: inline-block;
-  /* background-color: green; */
   height: 50px;
   width: 100%;
-  /* opacity: 0; */
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   border-radius: 5px;
-  /* width: 100%; */
 }
 
 .radio-container input:checked + label {
-  /* background-color: grey; */
-  /* height: 50px; */
   background-color: #ed6a5a;
-  /* background-image: linear-gradient(315deg, #f9484a 0%, #fbd72b 74%); */
-  /* opacitY: 100%; */
 }
 
 .radio-container input:checked + label span::after {
@@ -220,17 +179,16 @@
 }
 
 .marketplace__searchbar-top button {
-  /* margin-right: 20px; */
   font: inherit;
   font-size: 1.3rem;
   background-color: #ed6a5a;
   color: #795710;
-  /* border: 2px solid #795710; */
   border: 1px solid transparent;
   padding: 10px 20px;
   box-shadow: 0 2px 1px -1px #4410096e, 0px 0px 0px 0px #4410096e inset;
   border-radius: 5px;
-  transition: box-shadow .08s linear;
+  transition: box-shadow 0.08s linear;
+  cursor: pointer;
 }
 
 .marketplace__searchbar-top button:hover,
@@ -242,14 +200,97 @@
   width: 60%;
 }
 
+.marketplace__searchbar-bot {
+  display: flex;
+  flex-direction: column;
+}
+
+.marketplace__searchbar-bot select {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+  color: #795710;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.marketplace__searchbar-bot select:focus {
+  background-color: #434343;
+  color: #facc6b;
+  outline: 0;
+}
+
+.marketplace__searchbar-bot-upper,
+.marketplace__searchbar-bot-lower {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.marketplace__searchbar-bot-upper div,
+.marketplace__searchbar-bot-lower div {
+  flex: 1;
+  height: 100%;
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.marketplace__searchbar-bot-upper div:not(:first-child) > input,
+.marketplace__searchbar-bot-upper div:not(:first-child) > label,
+.marketplace__searchbar-bot-upper div > select,
+.marketplace__searchbar-bot-lower div > input,
+.marketplace__searchbar-bot-lower div > select {
+  flex: 1;
+}
+
+.marketplace__searchbar-bot-upper div > label,
+.marketplace__searchbar-bot-lower div > label {
+  display: none;
+}
+
 .marketplace__searchbar-bot input#searchbar {
   background-image: url("../img/search-icon.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right;
-  text-indent: 5px;
+  background-position: left;
+  text-indent: 2rem;
+  font-size: 1.3rem;
+  border: 0px solid transparent;
+  padding: 10px;
+  width: 150px;
+  max-width: 400px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+  color: #4410096e;
 }
 
 .marketplace__searchbar-bot input#searchbar:focus {
-  background-image: none;
+  outline: 0;
+  width: 100%;
+  background-color: #434343;
+  color: #facc6b;
+}
+
+.mbonus-container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.mbonus-container label {
+  margin-right: 10px;
+}
+
+.mbonus-container input[type="checkbox"] {
+  border: 1px solid transparent;
+  height: 30px;
+  width: 30px;
 }

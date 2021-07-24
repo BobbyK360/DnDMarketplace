@@ -84,48 +84,76 @@
           </div>
 
           <div class="marketplace__searchbar-bot">
-            <input type="search" name="" id="searchbar" />
-            <label for="searchbar"></label>
+            <div class="marketplace__searchbar-bot-upper">
+              <div class="searchbar-wrapper">
+                <input
+                  type="search"
+                  name=""
+                  id="searchbar"
+                  placeholder="Search"
+                />
+                <label for="searchbar"></label>
+              </div>
 
-            <label for="weparmitem">Wep/Arm/Item</label>
-            <select name="weparmitem" id="weparmitem">
-              <option value="weapon">Weapon</option>
-              <option value="armour">Armour</option>
-              <option value="item">Item</option>
-            </select>
+              <div class="weparmitem-wrapper">
+                <label for="weparmitem">Wep/Arm/Item</label>
+                <select name="weparmitem" id="weparmitem">
+                  <option value="unspecified">Wep/Arm/Item</option>
+                  <option value="weapon">Weapon</option>
+                  <option value="armour">Armour</option>
+                  <option value="item">Item</option>
+                </select>
+              </div>
 
-            <label for="item-rarity">Rarity</label>
-            <select name="item-rarity" id="item-rarity">
-              <option value="common">Common</option>
-              <option value="uncommon">Uncommon</option>
-              <option value="rare">Rare</option>
-              <option value="vrare">Very Rare</option>
-              <option value="legendary">Legendary</option>
-              <option value="artifact">Artifact</option>
-              <option value="varies">Varies</option>
-              <option value="unknown">Unknown</option>
-            </select>
+              <div class="item-rarity-wrapper">
+                <label for="item-rarity">Rarity</label>
+                <select name="item-rarity" id="item-rarity">
+                  <option value="unspecified">Rarity</option>
+                  <option value="common">Common</option>
+                  <option value="uncommon">Uncommon</option>
+                  <option value="rare">Rare</option>
+                  <option value="vrare">Very Rare</option>
+                  <option value="legendary">Legendary</option>
+                  <option value="artifact">Artifact</option>
+                  <option value="varies">Varies</option>
+                  <option value="unknown">Unknown</option>
+                </select>
+              </div>
+            </div>
 
-            <label for="combat-style">Combat Style</label>
-            <select name="combat-style" id="combat-style">
-              <option value="melee">Melee</option>
-              <option value="ranged">Ranged</option>
-              <!-- <option value="item">Magic</option> -->
-            </select>
+            <div class="marketplace__searchbar-bot-lower">
+              <div class="combat-style-wrapper">
+                <label for="combat-style">Combat Style</label>
+                <select name="combat-style" id="combat-style">
+                  <option value="unspecified">Combat Style</option>
+                  <option value="melee">Melee</option>
+                  <option value="ranged">Ranged</option>
+                  <!-- <option value="item">Magic</option> -->
+                </select>
+              </div>
 
-            <label for="weapon-type">Weapon Type</label>
-            <select name="weapon-type" id="weapon-type"></select>
+              <div class="weapon-type-wrapper">
+                <label for="weapon-type">Weapon Type</label>
+                <select name="weapon-type" id="weapon-type"></select>
+              </div>
 
-            <span class="mag-bonus">
-              <label for="mbonus-1">+1</label>
-              <input type="checkbox" name="mbonus" id="mbonus-1" />
+              <div class="mag-bonus-wrapper">
+                <span class="mbonus-container">
+                  <label for="mbonus-1">+1</label>
+                  <input type="checkbox" name="mbonus" id="mbonus-1" />
+                </span>
 
-              <label for="mbonus-2">+2</label>
-              <input type="checkbox" name="mbonus" id="mbonus-2" />
+                <span class="mbonus-container">
+                  <label for="mbonus-2">+2</label>
+                  <input type="checkbox" name="mbonus" id="mbonus-2" />
+                </span>
 
-              <label for="mbonus-3">+3</label>
-              <input type="checkbox" name="mbonus" id="mbonus-3" />
-            </span>
+                <span class="mbonus-container">
+                  <label for="mbonus-3">+3</label>
+                  <input type="checkbox" name="mbonus" id="mbonus-3" />
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

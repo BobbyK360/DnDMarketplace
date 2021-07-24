@@ -11,6 +11,7 @@ const campaignArray = [
   },
 ];
 const weaponTypeArray = [
+  "Weapon Type",
   "Battleaxe",
   "Blowgun",
   "Boomerang",
@@ -82,6 +83,7 @@ function campaignBuilder() {
     campaignDivString += htmlCreator();
   }
   campaignSelection.innerHTML = campaignDivString;
+
 }
 
 function selectOutline() {
@@ -110,4 +112,9 @@ function loadWeaponType() {
     weaponTypeString += htmlCreator();
   }
   weaponTypeEl.innerHTML = weaponTypeString;
+
+  const weaponTypeFirstDropdown = document.querySelector('#weapon-type > option:first-child');
+  weaponTypeFirstDropdown.value = "unspecified"
+  // console.log(weaponTypeFirstDropdown);
+  // weaponTypeFirstDropdown.style.background = "#000";
 }
