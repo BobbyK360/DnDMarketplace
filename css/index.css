@@ -27,7 +27,6 @@
   display: inline-block;
   margin-right: 10px;
   /* border: 0px solid transparent; */
-  cursor: pointer;
 }
 
 .campaign label {
@@ -35,9 +34,9 @@
   height: 100%;
   position: relative;
   border: 5px solid transparent;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
-
 
 .campaign label img {
   height: 100%;
@@ -63,7 +62,7 @@
   text-align: center;
 }
 
-.campaign input[type=radio] {
+.campaign input[type="radio"] {
   display: none;
 }
 
@@ -101,11 +100,10 @@
   margin: 0 10px;
   width: 200px;
   height: 50px;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   color: white;
   font-size: 1.5rem;
-  cursor: pointer;
   /* background-color: #ed6a5a; */
   /* background-color: #e9907d; */
   /* background-color: #672a04; */
@@ -115,6 +113,37 @@
   background: linear-gradient(to bottom, #d67600 0%, #f9b50f 100%);
   border-radius: 5px 5px 0px 0px;
   font-weight: 700;
+  position: relative;
+}
+
+.marketplace__tab-wrapper span label {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: grey; */
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  cursor: pointer;
+}
+
+.marketplace__tab-wrapper span label::after {
+  content: "";
+  width: 0px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  transform: translateY(15px);
+  transition: width .2s ease-in-out;
+}
+
+.marketplace__tab-wrapper span input:checked + label::after {
+  width: 60%;
+}
+
+.marketplace__tab-wrapper span input[type="radio"] {
+  display: none;
 }
 
 .marketplace__searchbar-wrapper {
@@ -131,11 +160,19 @@
   flex-direction: column;
   border-radius: 10px;
   font-weight: 700;
+  box-shadow: -10px 5px 15px 5px #0e0d0d;
+}
+
+.marketplace__searchbar-top {
+  flex: 4;
+}
+
+.marketplace__searchbar-bot {
+  flex: 6;
 }
 
 .marketplace__searchbar-top,
 .marketplace__searchbar-bot {
-  flex: 1;
   width: 80%;
   padding: 0 10px;
 }
@@ -159,6 +196,7 @@
 .radio-container {
   margin: 5px 5px 5px 0px;
   flex: 1;
+  border-radius: 5px;
 }
 
 .radio-container input[type="radio"] {
@@ -169,9 +207,14 @@
   display: inline-block;
   height: 50px;
   width: 100%;
+  border: 3px solid #795710;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.radio-container input:checked + label {
+  border: 3px solid transparent;
 }
 
 .radio-container input:checked + label {
@@ -183,10 +226,6 @@
   background: -webkit-linear-gradient(top, #D67600 0%, #F9B50F 100%);
   background: linear-gradient(to bottom, #D67600 0%, #F9B50F 100%); */
   color: #fff;
-}
-
-.radio-container input:checked + label span::after {
-  width: 60%;
 }
 
 .radio-container label span {
@@ -206,6 +245,10 @@
   position: absolute;
   transform: translateY(15px);
   transition: all 0.2s ease-in-out;
+}
+
+.radio-container input:checked + label span::after {
+  width: 60%;
 }
 
 .marketplace__searchbar-top button {
@@ -323,10 +366,12 @@
 
 .mbonus-container label {
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .mbonus-container input[type="checkbox"] {
   border: 1px solid transparent;
   height: 30px;
   width: 30px;
+  cursor: pointer;
 }
