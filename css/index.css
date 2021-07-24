@@ -93,14 +93,24 @@
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
-  background-color: #ed6a5a;
+  /* background-color: #ed6a5a; */
+  /* background-color: #e9907d; */
+  /* background-color: #672a04; */
+  /* background-color: #d67600; */
+  background: -moz-linear-gradient(top, #d67600 0%, #f9b50f 100%);
+  background: -webkit-linear-gradient(top, #d67600 0%, #f9b50f 100%);
+  background: linear-gradient(to bottom, #d67600 0%, #f9b50f 100%);
   border-radius: 5px 5px 0px 0px;
   font-weight: 700;
 }
 
 .marketplace__searchbar-wrapper {
   height: 300px;
-  background-image: linear-gradient(315deg, #facc6b 0%, #fabc3c 74%);
+  /* background-image: linear-gradient(315deg, #facc6b 0%, #fabc3c 74%); */
+  /* background-color: #ffbe6e; */
+  background: -moz-linear-gradient(315deg, #ffbe63 30%, #efee8f 100%);
+  background: -webkit-linear-gradient(315deg, #ffbe63 30%, #efee8f 100%);
+  background: linear-gradient(315deg, #ffbe63 30%, #efee8f 100%);
   color: #795710;
   display: flex;
   justify-content: center;
@@ -152,7 +162,14 @@
 }
 
 .radio-container input:checked + label {
-  background-color: #ed6a5a;
+  /* background-color: #ed6a5a; */
+  /* background-color: #e9907d; */
+  /* background-color: #d19f9c; */
+  background-color: #d67600;
+  /* background: -moz-linear-gradient(top, #D67600 0%, #F9B50F 100%);
+  background: -webkit-linear-gradient(top, #D67600 0%, #F9B50F 100%);
+  background: linear-gradient(to bottom, #D67600 0%, #F9B50F 100%); */
+  color: #fff;
 }
 
 .radio-container input:checked + label span::after {
@@ -181,7 +198,12 @@
 .marketplace__searchbar-top button {
   font: inherit;
   font-size: 1.3rem;
-  background-color: #ed6a5a;
+  /* background-color: #ed6a5a; */
+  /* background-color: #e9907d; */
+  /* background-color: #d67600; */
+  background: -moz-linear-gradient(top, #d67600 0%, #f9b50f 100%);
+  background: -webkit-linear-gradient(top, #d67600 0%, #f9b50f 100%);
+  background: linear-gradient(to bottom, #d67600 0%, #f9b50f 100%);
   color: #795710;
   border: 1px solid transparent;
   padding: 10px 20px;
@@ -273,7 +295,8 @@
   outline: 0;
   width: 100%;
   background-color: #434343;
-  color: #facc6b;
+  /* color: #facc6b; */
+  color: #ffbe6e;
 }
 
 .mbonus-container {
