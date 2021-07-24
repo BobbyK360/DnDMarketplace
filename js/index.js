@@ -65,7 +65,6 @@ const weaponTypeArray = [
 
 window.addEventListener("load", () => {
   campaignBuilder();
-  selectOutline();
   loadWeaponType();
 });
 
